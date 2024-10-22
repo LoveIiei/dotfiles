@@ -1,6 +1,13 @@
 # Personal Dot Files
 
-## Hi, this is my personal dotfiles
+## Hi, this is my personal dotfiles,
+- it has Kitty terminal
+- Wezterm terminal
+- Neovim with Astronvim and Lazyvim
+- ZSH with Starship
+- yabai
+- *and more in the future...*  
+
 
 ### Neovim:
 ***Note, I have switched from Astronvim to Lazyvim***   

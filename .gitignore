@@ -1,0 +1,11 @@
+# This file is used to exclude files and directories from Git version control.
+.DS_Store
+
+cmus/
+github-copilot/
+jgit/
+neovim22/
+Unreal Engine/
+Microsoft\VisualStudio Services/
+xbuild/
+nnn/

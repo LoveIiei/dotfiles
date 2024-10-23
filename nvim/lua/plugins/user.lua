@@ -51,7 +51,7 @@ return {
     event = "BufRead",
     config = function()
       -- Set the updatetime
-      vim.opt.updatetime = 200
+      vim.opt.updatetime = 500
 
       -- Setup for the plugin with keymaps
       require("fittencode").setup({

@@ -11,15 +11,15 @@ return {
       },
       color_overrides = {
         latte = {
-          rosewater = "#c14a4a",
-          flamingo = "#c14a4a",
-          red = "#c14a4a",
+          rosewater = "#a43b35",
+          flamingo = "#da3537",
+          red = "#ff5132",
           maroon = "#c14a4a",
           pink = "#945e80",
           mauve = "#aa3685",
           peach = "#c35e0a",
           yellow = "#b47109",
-          green = "#006600",
+          green = "#008000",
           teal = "#6db57f",
           sky = "#52b1c7",
           sapphire = "#3fb4b8",
@@ -88,7 +88,7 @@ return {
       highlight_overrides = {
         all = function(colors)
           return {
-            Cursor = { fg = colors.crust, bg = colors.text }, -- Make the cursor lighter or a more visible color
+            Cursor = { fg = colors.base, bg = colors.mauve }, -- Make the cursor lighter or a more visible color
             CursorLine = { bg = colors.surface1 }, -- Make the current line background lighter to make the cursor stand out
             CmpItemMenu = { fg = colors.surface2 },
             CursorLineNr = { fg = colors.text },
@@ -347,9 +347,16 @@ return {
         end,
         latte = function(colors)
           return {
+            Cursor = { fg = colors.base, bg = colors.red },
+            TermCursor = { fg = colors.base, bg = colors.red },
+            TermCursorNC = { fg = colors.base, bg = colors.red },
+            -- Add visual mode selection for better visibility
+            Visual = { bg = colors.surface2 },
+            -- Add cursor line highlight
+            CursorLine = { bg = colors.surface1 },
+            -- Other existing settings
             IblIndent = { fg = colors.mantle },
             IblScope = { fg = colors.surface1 },
-
             LineNr = { fg = colors.surface1 },
           }
         end,

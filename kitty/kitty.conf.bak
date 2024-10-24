@@ -1,5 +1,5 @@
 # BEGIN_KITTY_THEME
-# Catppuccin-Latte
+# Catppuccin-Macchiato
 include current-theme.conf
 # END_KITTY_THEME
 
@@ -14,7 +14,7 @@ input_delay 0
 repaint_delay 2
 
 # font
-font_size                   18.0
+font_size                   19.0
 font_family                 Mononoki Nerd Font Mono
 bold_font                   Mononoki Nerd Font Mono Bold
 italic_font                 Mononoki Nerd Font Mono Italic

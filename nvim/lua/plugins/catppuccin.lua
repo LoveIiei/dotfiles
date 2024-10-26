@@ -115,9 +115,23 @@ return {
             NeoTreeTabSeparatorActive = { fg = colors.mantle, bg = colors.mantle },
             NeoTreeTabSeparatorInactive = { fg = colors.crust, bg = colors.crust },
             NeoTreeWinSeparator = { fg = colors.base, bg = colors.base },
-            NormalFloat = { bg = colors.base },
-            Pmenu = { bg = colors.mantle, fg = "" },
-            PmenuSel = { bg = colors.surface0, fg = "" },
+            Pmenu = { bg = colors.surface0 }, -- Main completion menu background
+            PmenuSel = { bg = colors.surface2, fg = colors.text }, -- Selected item
+            PmenuSbar = { bg = colors.surface1 }, -- Scrollbar
+            PmenuThumb = { bg = colors.overlay0 }, -- Scrollbar thumb
+            NormalFloat = { bg = colors.surface0 }, -- Floating window background
+            CmpItemKind = { bg = colors.surface0 },
+            CmpItemKindDefault = { bg = colors.surface0 },
+            CmpPmenu = { bg = colors.surface0 }, -- Cmp specific background
+            CmpDocNormal = { bg = colors.surface0 }, -- Documentation window content
+            CmpDocBorder = { fg = colors.surface2, bg = colors.surface0 }, -- Documentation window border
+            CmpDoc = { bg = colors.surface0 }, -- Documentation window
+            CmpItemAbbr = { bg = colors.surface0, fg = colors.text },
+            CmpItemAbbrMatch = { bg = colors.surface0, fg = colors.blue, bold = true },
+            CmpItemAbbrMatchFuzzy = { bg = colors.surface0, fg = colors.blue, bold = true },
+            -- Add specific snippet preview highlighting
+            SnipDescription = { bg = colors.surface0, fg = colors.text },
+            SnipBody = { bg = colors.surface0, fg = colors.text },
             TelescopePreviewBorder = { bg = colors.crust, fg = colors.crust },
             TelescopePreviewNormal = { bg = colors.crust },
             TelescopePreviewTitle = { fg = colors.crust, bg = colors.crust },
@@ -358,10 +372,25 @@ return {
             IblIndent = { fg = colors.mantle },
             IblScope = { fg = colors.surface1 },
             LineNr = { fg = colors.surface1 },
+            CmpItemKind = { bg = colors.surface0 },
+            CmpDocNormal = { bg = colors.surface0 },
+            CmpItemAbbr = { bg = colors.surface0, fg = colors.text },
+            CmpItemAbbrMatch = { bg = colors.surface0, fg = colors.blue, bold = true },
+            CmpItemAbbrMatchFuzzy = { bg = colors.surface0, fg = colors.blue, bold = true },
+            -- Snippet preview specific
+            SnipDescription = { bg = colors.surface0, fg = colors.text },
+            SnipBody = { bg = colors.surface0, fg = colors.text },
           }
         end,
       },
     })
+    vim.cmd([[
+      augroup CatppuccinCustom
+        autocmd!
+        autocmd ColorScheme * highlight! link CmpItemKind NormalFloat
+        autocmd ColorScheme * highlight! link CmpDocNormal NormalFloat
+      augroup END
+    ]])
 
     vim.api.nvim_command("colorscheme catppuccin")
   end,

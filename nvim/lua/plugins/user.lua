@@ -41,30 +41,36 @@ return {
     end,
   },
   {
+    "kawre/leetcode.nvim",
+    cmd = "Leet",
+    build = ":TSUpdate html",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-lua/plenary.nvim", -- required by telescope
+      "MunifTanjim/nui.nvim",
+
+      -- optional
+      "nvim-treesitter/nvim-treesitter",
+      "rcarriga/nvim-notify",
+      "nvim-tree/nvim-web-devicons",
+    },
+    opts = {
+      -- configuration goes here
+      ---@type lc.lang
+      lang = "Go",
+
+      ---@type lc.storage
+      storage = {
+        home = vim.fn.expand("~/Documents/leetcode"),
+        cache = vim.fn.expand("~/.cache/leetcode"),
+      },
+    },
+  },
+  {
     "pmizio/typescript-tools.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     ft = { "typescript", "typescriptreact," },
     opts = {},
-  },
-  {
-    "luozhiya/fittencode.nvim",
-    event = "BufRead",
-    config = function()
-      -- Set the updatetime
-      vim.opt.updatetime = 1000
-
-      -- Setup for the plugin with keymaps
-      require("fittencode").setup({
-        keymaps = {
-          inline = {
-            ["<A-Down>"] = "accept_line",
-            ["<A-Right>"] = "accept_word",
-            ["<A-Up>"] = "revoke_line",
-            ["<A-Left>"] = "revoke_word",
-          },
-        },
-      })
-    end,
   },
   {
     "ray-x/go.nvim",

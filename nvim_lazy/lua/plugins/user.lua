@@ -57,7 +57,7 @@ return {
     opts = {
       -- configuration goes here
       ---@type lc.lang
-      lang = "golang",
+      lang = "Go",
 
       ---@type lc.storage
       storage = {
@@ -97,10 +97,12 @@ return {
   },
   {
     "iamcco/markdown-preview.nvim",
+    event = "VeryLazy",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     build = "cd app && yarn install",
     init = function()
       vim.g.mkdp_filetypes = { "markdown" }
+      vim.g.mkdp_auto_start = 1
     end,
     ft = { "markdown" },
   },

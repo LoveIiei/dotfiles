@@ -1,0 +1,11 @@
+Pdf: zathura, mupdf, girara
+
+file exployer: yazi, jq, ffmpegthumbnailer, 7-zip, fd, poppler, rg, fzf, ImageMagick, xclip
+
+sys info: fastfetch
+
+Window manager: yabai, skhd,JankyBorders 
+
+git: lazygit
+
+code highlighting: treesitter

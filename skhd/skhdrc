@@ -27,6 +27,5 @@ ctrl + alt - right : yabai -m window --resize right:50:0; \
                   yabai -m window --resize left:50:0
 
 # full screen
-ctrl - f         : yabai -m window --toggle zoom-fullscreen
 ctrl + cmd - f : yabai -m window --toggle native-fullscreen
 

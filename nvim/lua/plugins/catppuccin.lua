@@ -384,13 +384,6 @@ return {
         end,
       },
     })
-    vim.cmd([[
-      augroup CatppuccinCustom
-        autocmd!
-        autocmd ColorScheme * highlight! link CmpItemKind NormalFloat
-        autocmd ColorScheme * highlight! link CmpDocNormal NormalFloat
-      augroup END
-    ]])
 
     vim.api.nvim_command("colorscheme catppuccin")
   end,

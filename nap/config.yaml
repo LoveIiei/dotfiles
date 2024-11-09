@@ -1,0 +1,18 @@
+# Configuration
+config: "~/.config/nap/config.yaml"
+home: ~/.nap
+default_language: go
+theme: latte
+
+# Colors
+background: "#EFF1F5"           # Very light gray, similar to white but softer
+foreground: "#4C4F69"           # Dark charcoal for readable text on light background
+primary_color: "#DC8A78"        # Soft coral, for primary accents
+primary_color_subdued: "#8C8FA1" # Muted lavender-gray for subtle highlights
+green: "#40A02B"                # Earthy green, gentle on light backgrounds
+bright_green: "#A6D189"         # Pastel green for emphasized green tones
+red: "#D20F39"                  # Muted red, visible without being overpowering
+bright_red: "#E78284"           # Softer red, still contrasts well with light
+black: "#5C5F77"                # Dark gray, suitable for light theme contrast
+gray: "#ACB0BE"                 # Subdued gray, ideal for muted elements
+white: "#FFFFFF"                # True white for highlights

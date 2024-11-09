@@ -60,7 +60,12 @@ inner.horizontal = 10
 inner.vertical =   10
 outer.left =       10
 outer.bottom =     10
-outer.top =        10
+# Define outer gaps for each monitor
+outer.top = [
+  { monitor."1" = 15 },     # External monitor
+  { monitor."^built-in retina display$" = 15 },    # Laptop screen
+  10                         # Default value if no match
+]
 outer.right =      10
 
 # 'main' binding mode declaration

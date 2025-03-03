@@ -1,0 +1,72 @@
+# BEGIN_KITTY_THEME
+# Terafox
+include current-theme.conf
+# END_KITTY_THEME
+
+# global
+term xterm-256color
+shell_integration enabled
+allow_hyperlinks yes
+editor /opt/homebrew/bin/nvim
+cursor_trail 1
+
+# performance
+input_delay 1
+repaint_delay 5
+
+# font
+font_size                   16.0
+font_family                 Maple Mono NF CN
+bold_font                   Maple Mono NF CN Bold
+italic_font                 Maple Mono NF CN Italic
+bold_italic_font            Maple Mono NF CN Bold Italic
+symbol_map U+23FB-U+23FE,U+2665,U+26A1,U+2B58,U+E000-U+E00A,U+E0A0-U+E0A3,U+E0B0-U+E0D4,U+E200-U+E2A9,U+E300-U+E3E3,U+E5FA-U+E6AA,U+E700-U+E7C5,U+EA60-U+EBEB,U+F000-U+F2E0,U+F300-U+F32F,U+F400-U+F4A9,U+F500-U+F8FF,U+F0001-U+F1AF0 Symbols Nerd Font Mono
+
+# window
+initial_window_width        800
+initial_window_height       1000
+inactive_text_alpha         1.0
+enabled_layouts splits
+hide_window_decorations     titlebar-only
+window_padding_width        0
+# background_opacity          0.2
+remember_window_size        no
+
+# tab bar
+tab_title_template          "{index}: {title.split('/')[-1]}"
+tab_bar_edge                top
+tab_bar_style               powerline
+tab_powerline_style         slanted
+
+# keymaps
+map cmd+1 goto_tab 1
+map cmd+2 goto_tab 2
+map cmd+3 goto_tab 3
+map cmd+4 goto_tab 4
+map cmd+5 goto_tab 5
+map cmd+6 goto_tab 6
+map cmd+7 goto_tab 7
+map cmd+8 goto_tab 8
+map cmd+9 goto_tab 9
+map cmd+0 goto_tab 0
+# open new tab with cmd+t
+map cmd+t new_tab
+# switch between next and previous splits
+map cmd+] next_window
+map cmd+[ previous_window
+
+# macos key mapping
+macos_option_as_alt         yes
+
+# key mappings
+map cmd+/ launch --location=hsplit --cwd=current
+map cmd+\ launch --location=vsplit --cwd=current
+map ctrl+shift+h neighboring_window left
+map ctrl+shift+l neighboring_window right
+map ctrl+shift+k neighboring_window up
+map ctrl+shift+j neighboring_window down
+map ctrl+shift+left resize_window narrower
+map ctrl+shift+right resize_window wider
+map ctrl+shift+up resize_window taller
+map ctrl+shift+down resize_window shorter
+

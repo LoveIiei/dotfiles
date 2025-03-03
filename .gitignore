@@ -1,0 +1,9 @@
+.mono/
+gh/
+github-copilot/
+.DS_Store
+fish/
+raycast/
+spicetify/Themes/
+spicetify/CustomApps/
+flutter/

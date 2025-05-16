@@ -1,5 +1,23 @@
 return {
   {
+    "seblyng/roslyn.nvim",
+    ft = "cs",
+    opts = {
+      config = {
+        cmd = {
+          "dotnet",
+          vim.fn.expand("~/.local/share/roslyn-ls/Microsoft.CodeAnalysis.LanguageServer.dll"),
+          "--logLevel=Information",
+          "--extensionLogDirectory=" .. vim.fs.dirname(vim.lsp.get_log_path()),
+          "--stdio",
+        },
+      },
+    },
+  },
+  {
+    "rebelot/kanagawa.nvim",
+  },
+  {
     "vyfor/cord.nvim",
     build = ":Cord update",
     -- opts = {}
@@ -8,7 +26,7 @@ return {
   {
     "OXY2DEV/markview.nvim",
     -- lazy = false, -- Recommended
-    ft = { "markdown", "typst", "html" }, -- If you decide to lazy-load anyway
+    ft = { "markdown", "html" }, -- If you decide to lazy-load anyway
     preview = {
       icon_provider = "mini",
     },
@@ -57,18 +75,18 @@ return {
   --   "kaarmu/typst.vim",
   --   ft = "typst",
   -- },
-  {
-    "EdenEast/nightfox.nvim",
-    config = function()
-      require("nightfox").setup({
-        options = {
-          styles = {
-            comments = "italic",
-            keyword = "bold",
-            types = "italic,bold",
-          },
-        },
-      })
-    end,
-  }, -- lazy
+  --   {
+  --     "EdenEast/nightfox.nvim",
+  --     config = function()
+  --       require("nightfox").setup({
+  --         options = {
+  --           styles = {
+  --             comments = "italic",
+  --             keyword = "bold",
+  --             types = "italic,bold",
+  --           },
+  --         },
+  --       })
+  --     end,
+  --   }, -- lazy
 }

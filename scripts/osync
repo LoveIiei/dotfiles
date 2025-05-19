@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Configuration
+LOCAL_DIR="$(pwd)/" # Trailing slash ensures contents are synced
+REMOTE_USER="huaweiyu"
+REMOTE_HOST="it-ia3010-30.utsc-labs.utoronto.ca"
+REMOTE_DIR="cscb09w25_space/ass3/"
+REMOTE_PATH="$REMOTE_USER@$REMOTE_HOST:$REMOTE_DIR"
+
+# Allow overriding the remote path via a command-line argument
+if [[ $1 ]]; then
+  REMOTE_PATH="$1"
+fi
+
+# Rsync options
+RSYNC_OPTS="-avzh --progress --exclude='*.out'"
+
+echo "Watching for changes on $LOCAL_DIR"
+
+# Watch for changes and sync automatically
+fswatch -o "$LOCAL_DIR" | while read change; do
+  sleep 1 # Debounce multiple events
+  rsync $RSYNC_OPTS "$LOCAL_DIR" "$REMOTE_PATH"
+done
